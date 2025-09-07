@@ -1,0 +1,108 @@
+/* Background animation */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+  background: linear-gradient(120deg, #0f223a, #1c3c64);
+  background-size: 300% 300%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  background: rgba(231, 76, 60, 0.9);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.controls, .algorithms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.controls label {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.controls input[type="range"] {
+  margin: 0 10px;
+}
+
+.controls input[type="text"] {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  margin-left: 10px;
+}
+
+.controls button,
+.algorithms button {
+  margin: 5px;
+  padding: 8px 14px;
+  background: white;
+  color: #e74c3c;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.controls button:hover,
+.algorithms button:hover {
+  background: #f9dede;
+}
+
+#bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 500px;
+  margin: 20px auto;
+  width: 95%;
+}
+
+.bar {
+  margin: 1px;
+  background: #ff007f;
+  border-radius: 4px;
+  transition: height 0.2s ease, background 0.2s ease;
+}
+
+/* Floating animation */
+.bar:hover {
+  background: #00ffcc !important;
+  transition: 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  margin: 20px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+footer span {
+  color: #00ffcc;
+  font-weight: bold;
+}

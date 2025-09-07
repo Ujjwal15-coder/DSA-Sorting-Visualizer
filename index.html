@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sorting Visualizer</h1>
+    <div class="controls">
+      <label>Array Size:</label>
+      <input type="range" id="size" min="5" max="100" value="30" />
+
+      <label>Speed:</label>
+      <input type="range" id="speed" min="10" max="500" value="200" />
+
+      <button onclick="generateBars()">Random Array</button>
+      <input type="text" id="arrayInput" placeholder="Enter numbers e.g. 5,1,9,3" />
+      <button onclick="setCustomArray()">Set Array</button>
+    </div>
+    <div class="algorithms">
+      <button onclick="selectionSort()">Selection Sort</button>
+      <button onclick="bubbleSort()">Bubble Sort</button>
+      <button onclick="insertionSort()">Insertion Sort</button>
+      <button onclick="mergeSortHandler()">Merge Sort</button>
+      <button onclick="quickSortHandler()">Quick Sort</button>
+      <button onclick="heapSort()">Heap Sort</button>
+    </div>
+  </header>
+
+  <div id="bars"></div>
+
+  <footer>
+    <p>Developed by <span>Ujjwal</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
